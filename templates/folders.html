@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Folders</title>
+</head>
+<body>
+    <h1>Available Folders</h1>
+    <ul>
+        {% for folder in folders %}
+            <li>{{ folder }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ url_for('move_promotional_emails') }}">Move Promotional Emails</a>
+</body>
+</html>
