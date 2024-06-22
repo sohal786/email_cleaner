@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Cleaner</title>
+</head>
+<body>
+    <h1>Email Cleaner</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    {% if deleted_count is not none %}
+        <p>Emails deleted: {{ deleted_count }}</p>
+    {% endif %}
+    {% if show_button %}
+        <form action="{{ url_for('process_all') }}" method="get">
+            <button type="submit">Process All Emails</button>
+        </form>
+    {% endif %}
+</body>
+</html>
